@@ -1,0 +1,1237 @@
+EESchema Schematic File Version 4
+EELAYER 30 0
+EELAYER END
+$Descr USLetter 11000 8500
+encoding utf-8
+Sheet 1 1
+Title "Transfer Switch Interface, Version 1"
+Date "2022-01-16"
+Rev "-"
+Comp "Virginia Tech Ground Station and Amateur Radio"
+Comment1 ""
+Comment2 "creativecommons.org/licenses/by/4.0/"
+Comment3 "License: CC BY 4.0"
+Comment4 "Author: Zach Leffke, KJ4QLP"
+$EndDescr
+$Comp
+L dk_Optoisolators-Transistor-Photovoltaic-Output:ILD207T U1
+U 1 1 61E685BB
+P 5800 3750
+F 0 "U1" H 5800 4237 60  0000 C CNN
+F 1 "ILD207T" H 5800 4131 60  0000 C CNN
+F 2 "digikey-footprints:SOIC-8_W3.9mm" H 6000 3950 60  0001 L CNN
+F 3 "http://www.vishay.com/docs/83647/ild205t.pdf" V 6000 4050 60  0001 L CNN
+F 4 "751-1310-1-ND" H 6000 4150 60  0001 L CNN "Digi-Key_PN"
+F 5 "ILD207T" H 6000 4250 60  0001 L CNN "MPN"
+F 6 "Isolators" H 6000 4350 60  0001 L CNN "Category"
+F 7 "Optoisolators - Transistor, Photovoltaic Output" H 6000 4450 60  0001 L CNN "Family"
+F 8 "http://www.vishay.com/docs/83647/ild205t.pdf" H 6000 4550 60  0001 L CNN "DK_Datasheet_Link"
+F 9 "/product-detail/en/vishay-semiconductor-opto-division/ILD207T/751-1310-1-ND/1731615" H 6000 4650 60  0001 L CNN "DK_Detail_Page"
+F 10 "OPTOISOLTR 4KV 2CH TRANS 8-SOIC" H 6000 4750 60  0001 L CNN "Description"
+F 11 "Vishay Semiconductor Opto Division" H 6000 4850 60  0001 L CNN "Manufacturer"
+F 12 "Active" H 6000 4950 60  0001 L CNN "Status"
+	1    5800 3750
+	1    0    0    -1  
+$EndComp
+$Comp
+L Transistor_FET:DMG3414U Q1
+U 1 1 61E6A50C
+P 4150 4850
+F 0 "Q1" H 4354 4896 50  0000 L CNN
+F 1 "DMG3414U" H 4354 4805 50  0000 L CNN
+F 2 "Package_TO_SOT_SMD:SOT-23" H 4350 4775 50  0001 L CIN
+F 3 "http://www.diodes.com/assets/Datasheets/ds31739.pdf" H 4150 4850 50  0001 L CNN
+	1    4150 4850
+	1    0    0    -1  
+$EndComp
+$Comp
+L Transistor_FET:IRLML9301 Q3
+U 1 1 61E6D31D
+P 5350 1450
+F 0 "Q3" V 5692 1450 50  0000 C CNN
+F 1 "IRLML9301" V 5601 1450 50  0000 C CNN
+F 2 "Package_TO_SOT_SMD:SOT-23" H 5550 1375 50  0001 L CIN
+F 3 "https://www.infineon.com/dgdl/irlml9301pbf.pdf?fileId=5546d462533600a401535668e5e42640" H 5350 1450 50  0001 L CNN
+	1    5350 1450
+	0    1    -1   0   
+$EndComp
+$Comp
+L Device:LED D1
+U 1 1 61E75113
+P 3950 4150
+F 0 "D1" V 3989 4032 50  0000 R CNN
+F 1 "LED" V 3898 4032 50  0000 R CNN
+F 2 "LED_SMD:LED_0805_2012Metric" H 3950 4150 50  0001 C CNN
+F 3 "~" H 3950 4150 50  0001 C CNN
+	1    3950 4150
+	0    -1   -1   0   
+$EndComp
+$Comp
+L Device:R_US R13
+U 1 1 61E75E24
+P 5400 4450
+F 0 "R13" H 5332 4404 50  0000 R CNN
+F 1 "1k" H 5332 4495 50  0000 R CNN
+F 2 "digikey-footprints:0805" V 5440 4440 50  0001 C CNN
+F 3 "~" H 5400 4450 50  0001 C CNN
+	1    5400 4450
+	-1   0    0    1   
+$EndComp
+$Comp
+L Device:C C1
+U 1 1 61E7678D
+P 5750 2700
+F 0 "C1" H 5865 2746 50  0000 L CNN
+F 1 "0.01uF" H 5865 2655 50  0000 L CNN
+F 2 "digikey-footprints:0805" H 5788 2550 50  0001 C CNN
+F 3 "~" H 5750 2700 50  0001 C CNN
+	1    5750 2700
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR012
+U 1 1 61E78231
+P 5650 1650
+F 0 "#PWR012" H 5650 1400 50  0001 C CNN
+F 1 "GND" H 5655 1477 50  0000 C CNN
+F 2 "" H 5650 1650 50  0001 C CNN
+F 3 "" H 5650 1650 50  0001 C CNN
+	1    5650 1650
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:+28V #PWR01
+U 1 1 61E78A89
+P 2700 1750
+F 0 "#PWR01" H 2700 1600 50  0001 C CNN
+F 1 "+28V" H 2715 1923 50  0000 C CNN
+F 2 "" H 2950 1800 50  0001 C CNN
+F 3 "" H 2950 1800 50  0001 C CNN
+	1    2700 1750
+	1    0    0    -1  
+$EndComp
+$Comp
+L Diode:US1M D4
+U 1 1 61E8C41A
+P 5650 1500
+F 0 "D4" V 5604 1580 50  0000 L CNN
+F 1 "US1M" V 5695 1580 50  0000 L CNN
+F 2 "Diode_SMD:D_SMA" H 5650 1325 50  0001 C CNN
+F 3 "https://www.diodes.com/assets/Datasheets/ds16008.pdf" H 5650 1500 50  0001 C CNN
+	1    5650 1500
+	0    1    1    0   
+$EndComp
+$Comp
+L Device:R_US R3
+U 1 1 61E9BF2C
+P 3950 4450
+F 0 "R3" H 3882 4404 50  0000 R CNN
+F 1 "1k" H 3882 4495 50  0000 R CNN
+F 2 "digikey-footprints:0805" V 3990 4440 50  0001 C CNN
+F 3 "~" H 3950 4450 50  0001 C CNN
+	1    3950 4450
+	-1   0    0    1   
+$EndComp
+$Comp
+L power:+5V #PWR021
+U 1 1 61E9FF95
+P 7800 3700
+F 0 "#PWR021" H 7800 3550 50  0001 C CNN
+F 1 "+5V" H 7815 3873 50  0000 C CNN
+F 2 "" H 7800 3700 50  0001 C CNN
+F 3 "" H 7800 3700 50  0001 C CNN
+	1    7800 3700
+	1    0    0    -1  
+$EndComp
+$Comp
+L Transistor_FET:IRLML9301 Q5
+U 1 1 61EC0655
+P 6950 1450
+F 0 "Q5" V 7292 1450 50  0000 C CNN
+F 1 "IRLML9301" V 7201 1450 50  0000 C CNN
+F 2 "Package_TO_SOT_SMD:SOT-23" H 7150 1375 50  0001 L CIN
+F 3 "https://www.infineon.com/dgdl/irlml9301pbf.pdf?fileId=5546d462533600a401535668e5e42640" H 6950 1450 50  0001 L CNN
+	1    6950 1450
+	0    -1   -1   0   
+$EndComp
+$Comp
+L power:+28V #PWR07
+U 1 1 61EC27DC
+P 4450 1200
+F 0 "#PWR07" H 4450 1050 50  0001 C CNN
+F 1 "+28V" H 4465 1373 50  0000 C CNN
+F 2 "" H 4700 1250 50  0001 C CNN
+F 3 "" H 4700 1250 50  0001 C CNN
+	1    4450 1200
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:+28V #PWR019
+U 1 1 61EC2CE2
+P 7850 1200
+F 0 "#PWR019" H 7850 1050 50  0001 C CNN
+F 1 "+28V" H 7865 1373 50  0000 C CNN
+F 2 "" H 8100 1250 50  0001 C CNN
+F 3 "" H 8100 1250 50  0001 C CNN
+	1    7850 1200
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:R_US R10
+U 1 1 61ED1EF9
+P 5000 1500
+F 0 "R10" H 4932 1454 50  0000 R CNN
+F 1 "10k" H 4932 1545 50  0000 R CNN
+F 2 "digikey-footprints:0805" V 5040 1490 50  0001 C CNN
+F 3 "~" H 5000 1500 50  0001 C CNN
+	1    5000 1500
+	-1   0    0    1   
+$EndComp
+$Comp
+L Device:R_US R12
+U 1 1 61ED2B48
+P 5350 1800
+F 0 "R12" H 5418 1846 50  0000 L CNN
+F 1 "13k" H 5418 1755 50  0000 L CNN
+F 2 "digikey-footprints:0805" V 5390 1790 50  0001 C CNN
+F 3 "~" H 5350 1800 50  0001 C CNN
+	1    5350 1800
+	1    0    0    -1  
+$EndComp
+$Comp
+L Diode:US1M D5
+U 1 1 61EFD3DF
+P 6550 1500
+F 0 "D5" V 6504 1580 50  0000 L CNN
+F 1 "US1M" V 6595 1580 50  0000 L CNN
+F 2 "Diode_SMD:D_SMA" H 6550 1325 50  0001 C CNN
+F 3 "https://www.diodes.com/assets/Datasheets/ds16008.pdf" H 6550 1500 50  0001 C CNN
+	1    6550 1500
+	0    1    1    0   
+$EndComp
+$Comp
+L dk_Transistors-Bipolar-BJT-Single:MMBTA06LT1G Q2
+U 1 1 61F2C99F
+P 5250 2150
+F 0 "Q2" H 5438 2203 60  0000 L CNN
+F 1 "MMBTA06LT1G" H 5438 2097 60  0000 L CNN
+F 2 "digikey-footprints:SOT-23-3" H 5450 2350 60  0001 L CNN
+F 3 "http://www.onsemi.com/pub/Collateral/MMBTA05LT1-D.PDF" H 5450 2450 60  0001 L CNN
+F 4 "MMBTA06LT1GOSCT-ND" H 5450 2550 60  0001 L CNN "Digi-Key_PN"
+F 5 "MMBTA06LT1G" H 5450 2650 60  0001 L CNN "MPN"
+F 6 "Discrete Semiconductor Products" H 5450 2750 60  0001 L CNN "Category"
+F 7 "Transistors - Bipolar (BJT) - Single" H 5450 2850 60  0001 L CNN "Family"
+F 8 "http://www.onsemi.com/pub/Collateral/MMBTA05LT1-D.PDF" H 5450 2950 60  0001 L CNN "DK_Datasheet_Link"
+F 9 "/product-detail/en/on-semiconductor/MMBTA06LT1G/MMBTA06LT1GOSCT-ND/1139832" H 5450 3050 60  0001 L CNN "DK_Detail_Page"
+F 10 "TRANS NPN 80V 0.5A SOT23" H 5450 3150 60  0001 L CNN "Description"
+F 11 "ON Semiconductor" H 5450 3250 60  0001 L CNN "Manufacturer"
+F 12 "Active" H 5450 3350 60  0001 L CNN "Status"
+	1    5250 2150
+	1    0    0    -1  
+$EndComp
+$Comp
+L Diode:BAS16W D3
+U 1 1 61F6BD7F
+P 5550 2550
+F 0 "D3" H 5550 2333 50  0000 C CNN
+F 1 "BAS16W" H 5550 2424 50  0000 C CNN
+F 2 "digikey-footprints:SOT-23-3" H 5550 2375 50  0001 C CNN
+F 3 "https://assets.nexperia.com/documents/data-sheet/BAS16_SER.pdf" H 5550 2550 50  0001 C CNN
+	1    5550 2550
+	-1   0    0    1   
+$EndComp
+$Comp
+L Device:R_US R16
+U 1 1 61F8B0F9
+P 6950 1800
+F 0 "R16" H 7018 1846 50  0000 L CNN
+F 1 "13k" H 7018 1755 50  0000 L CNN
+F 2 "digikey-footprints:0805" V 6990 1790 50  0001 C CNN
+F 3 "~" H 6950 1800 50  0001 C CNN
+	1    6950 1800
+	1    0    0    -1  
+$EndComp
+$Comp
+L dk_Transistors-Bipolar-BJT-Single:MMBTA06LT1G Q6
+U 1 1 61F8BD1F
+P 7050 2150
+F 0 "Q6" H 7238 2203 60  0000 L CNN
+F 1 "MMBTA06LT1G" H 7238 2097 60  0000 L CNN
+F 2 "digikey-footprints:SOT-23-3" H 7250 2350 60  0001 L CNN
+F 3 "http://www.onsemi.com/pub/Collateral/MMBTA05LT1-D.PDF" H 7250 2450 60  0001 L CNN
+F 4 "MMBTA06LT1GOSCT-ND" H 7250 2550 60  0001 L CNN "Digi-Key_PN"
+F 5 "MMBTA06LT1G" H 7250 2650 60  0001 L CNN "MPN"
+F 6 "Discrete Semiconductor Products" H 7250 2750 60  0001 L CNN "Category"
+F 7 "Transistors - Bipolar (BJT) - Single" H 7250 2850 60  0001 L CNN "Family"
+F 8 "http://www.onsemi.com/pub/Collateral/MMBTA05LT1-D.PDF" H 7250 2950 60  0001 L CNN "DK_Datasheet_Link"
+F 9 "/product-detail/en/on-semiconductor/MMBTA06LT1G/MMBTA06LT1GOSCT-ND/1139832" H 7250 3050 60  0001 L CNN "DK_Detail_Page"
+F 10 "TRANS NPN 80V 0.5A SOT23" H 7250 3150 60  0001 L CNN "Description"
+F 11 "ON Semiconductor" H 7250 3250 60  0001 L CNN "Manufacturer"
+F 12 "Active" H 7250 3350 60  0001 L CNN "Status"
+	1    7050 2150
+	-1   0    0    -1  
+$EndComp
+$Comp
+L Diode:BAS16W D6
+U 1 1 61F8D262
+P 6750 2550
+F 0 "D6" H 6750 2767 50  0000 C CNN
+F 1 "BAS16W" H 6750 2676 50  0000 C CNN
+F 2 "digikey-footprints:SOT-23-3" H 6750 2375 50  0001 C CNN
+F 3 "https://assets.nexperia.com/documents/data-sheet/BAS16_SER.pdf" H 6750 2550 50  0001 C CNN
+	1    6750 2550
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:C C2
+U 1 1 620085D4
+P 6550 2700
+F 0 "C2" H 6665 2746 50  0000 L CNN
+F 1 "0.01uF" H 6665 2655 50  0000 L CNN
+F 2 "digikey-footprints:0805" H 6588 2550 50  0001 C CNN
+F 3 "~" H 6550 2700 50  0001 C CNN
+	1    6550 2700
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:R_US R9
+U 1 1 62008F91
+P 4750 2300
+F 0 "R9" H 4682 2254 50  0000 R CNN
+F 1 "2k" H 4682 2345 50  0000 R CNN
+F 2 "digikey-footprints:0805" V 4790 2290 50  0001 C CNN
+F 3 "~" H 4750 2300 50  0001 C CNN
+	1    4750 2300
+	-1   0    0    1   
+$EndComp
+$Comp
+L Device:R_US R8
+U 1 1 62009B58
+P 4750 1900
+F 0 "R8" H 4682 1854 50  0000 R CNN
+F 1 "6k" H 4682 1945 50  0000 R CNN
+F 2 "digikey-footprints:0805" V 4790 1890 50  0001 C CNN
+F 3 "~" H 4750 1900 50  0001 C CNN
+	1    4750 1900
+	-1   0    0    1   
+$EndComp
+$Comp
+L Device:R_US R7
+U 1 1 6200A5B5
+P 4750 1500
+F 0 "R7" H 4682 1454 50  0000 R CNN
+F 1 "10k" H 4682 1545 50  0000 R CNN
+F 2 "digikey-footprints:0805" V 4790 1490 50  0001 C CNN
+F 3 "~" H 4750 1500 50  0001 C CNN
+	1    4750 1500
+	-1   0    0    1   
+$EndComp
+$Comp
+L Device:R_US R6
+U 1 1 62015EFF
+P 4450 2300
+F 0 "R6" H 4382 2254 50  0000 R CNN
+F 1 "2.5k" H 4382 2345 50  0000 R CNN
+F 2 "digikey-footprints:0805" V 4490 2290 50  0001 C CNN
+F 3 "~" H 4450 2300 50  0001 C CNN
+	1    4450 2300
+	-1   0    0    1   
+$EndComp
+$Comp
+L Device:R_US R5
+U 1 1 62016AA9
+P 4450 1900
+F 0 "R5" H 4382 1854 50  0000 R CNN
+F 1 "20k" H 4382 1945 50  0000 R CNN
+F 2 "digikey-footprints:0805" V 4490 1890 50  0001 C CNN
+F 3 "~" H 4450 1900 50  0001 C CNN
+	1    4450 1900
+	-1   0    0    1   
+$EndComp
+$Comp
+L power:GND #PWR08
+U 1 1 62017637
+P 4750 2550
+F 0 "#PWR08" H 4750 2300 50  0001 C CNN
+F 1 "GND" H 4755 2377 50  0000 C CNN
+F 2 "" H 4750 2550 50  0001 C CNN
+F 3 "" H 4750 2550 50  0001 C CNN
+	1    4750 2550
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:+5V #PWR010
+U 1 1 62050200
+P 5400 3450
+F 0 "#PWR010" H 5400 3300 50  0001 C CNN
+F 1 "+5V" H 5415 3623 50  0000 C CNN
+F 2 "" H 5400 3450 50  0001 C CNN
+F 3 "" H 5400 3450 50  0001 C CNN
+	1    5400 3450
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:R_US R11
+U 1 1 62051E4C
+P 5050 4450
+F 0 "R11" H 4982 4404 50  0000 R CNN
+F 1 "1k" H 4982 4495 50  0000 R CNN
+F 2 "digikey-footprints:0805" V 5090 4440 50  0001 C CNN
+F 3 "~" H 5050 4450 50  0001 C CNN
+	1    5050 4450
+	-1   0    0    1   
+$EndComp
+$Comp
+L power:+5V #PWR09
+U 1 1 6205291A
+P 5050 4000
+F 0 "#PWR09" H 5050 3850 50  0001 C CNN
+F 1 "+5V" H 5065 4173 50  0000 C CNN
+F 2 "" H 5050 4000 50  0001 C CNN
+F 3 "" H 5050 4000 50  0001 C CNN
+	1    5050 4000
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:+5V #PWR03
+U 1 1 6206139A
+P 2950 1750
+F 0 "#PWR03" H 2950 1600 50  0001 C CNN
+F 1 "+5V" H 2965 1923 50  0000 C CNN
+F 2 "" H 2950 1750 50  0001 C CNN
+F 3 "" H 2950 1750 50  0001 C CNN
+	1    2950 1750
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:LED D2
+U 1 1 620719DB
+P 5050 4150
+F 0 "D2" V 5089 4032 50  0000 R CNN
+F 1 "LED" V 4998 4032 50  0000 R CNN
+F 2 "LED_SMD:LED_0805_2012Metric" H 5050 4150 50  0001 C CNN
+F 3 "~" H 5050 4150 50  0001 C CNN
+	1    5050 4150
+	0    -1   -1   0   
+$EndComp
+$Comp
+L Device:R_US R4
+U 1 1 620725BA
+P 4250 4450
+F 0 "R4" H 4182 4404 50  0000 R CNN
+F 1 "1k" H 4182 4495 50  0000 R CNN
+F 2 "digikey-footprints:0805" V 4290 4440 50  0001 C CNN
+F 3 "~" H 4250 4450 50  0001 C CNN
+	1    4250 4450
+	-1   0    0    1   
+$EndComp
+$Comp
+L power:+5V #PWR05
+U 1 1 620731D0
+P 3950 4000
+F 0 "#PWR05" H 3950 3850 50  0001 C CNN
+F 1 "+5V" H 3965 4173 50  0000 C CNN
+F 2 "" H 3950 4000 50  0001 C CNN
+F 3 "" H 3950 4000 50  0001 C CNN
+	1    3950 4000
+	1    0    0    -1  
+$EndComp
+$Comp
+L Transistor_FET:DMG3414U Q4
+U 1 1 6207614A
+P 5500 4850
+F 0 "Q4" H 5705 4896 50  0000 L CNN
+F 1 "DMG3414U" H 5705 4805 50  0000 L CNN
+F 2 "Package_TO_SOT_SMD:SOT-23" H 5700 4775 50  0001 L CIN
+F 3 "http://www.diodes.com/assets/Datasheets/ds31739.pdf" H 5500 4850 50  0001 L CNN
+	1    5500 4850
+	-1   0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR015
+U 1 1 621439C2
+P 6200 3950
+F 0 "#PWR015" H 6200 3700 50  0001 C CNN
+F 1 "GND" H 6205 3777 50  0000 C CNN
+F 2 "" H 6200 3950 50  0001 C CNN
+F 3 "" H 6200 3950 50  0001 C CNN
+	1    6200 3950
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR011
+U 1 1 62144847
+P 5400 5050
+F 0 "#PWR011" H 5400 4800 50  0001 C CNN
+F 1 "GND" H 5405 4877 50  0000 C CNN
+F 2 "" H 5400 5050 50  0001 C CNN
+F 3 "" H 5400 5050 50  0001 C CNN
+	1    5400 5050
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR06
+U 1 1 621454A1
+P 4250 5050
+F 0 "#PWR06" H 4250 4800 50  0001 C CNN
+F 1 "GND" H 4255 4877 50  0000 C CNN
+F 2 "" H 4250 5050 50  0001 C CNN
+F 3 "" H 4250 5050 50  0001 C CNN
+	1    4250 5050
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:R_US R17
+U 1 1 62149AD0
+P 7250 1500
+F 0 "R17" H 7182 1454 50  0000 R CNN
+F 1 "10k" H 7182 1545 50  0000 R CNN
+F 2 "digikey-footprints:0805" V 7290 1490 50  0001 C CNN
+F 3 "~" H 7250 1500 50  0001 C CNN
+	1    7250 1500
+	-1   0    0    1   
+$EndComp
+$Comp
+L Device:R_US R18
+U 1 1 6214A937
+P 7550 1500
+F 0 "R18" H 7482 1454 50  0000 R CNN
+F 1 "10k" H 7482 1545 50  0000 R CNN
+F 2 "digikey-footprints:0805" V 7590 1490 50  0001 C CNN
+F 3 "~" H 7550 1500 50  0001 C CNN
+	1    7550 1500
+	-1   0    0    1   
+$EndComp
+$Comp
+L Device:R_US R19
+U 1 1 62153C54
+P 7550 1900
+F 0 "R19" H 7482 1854 50  0000 R CNN
+F 1 "6k" H 7482 1945 50  0000 R CNN
+F 2 "digikey-footprints:0805" V 7590 1890 50  0001 C CNN
+F 3 "~" H 7550 1900 50  0001 C CNN
+	1    7550 1900
+	-1   0    0    1   
+$EndComp
+$Comp
+L Device:R_US R20
+U 1 1 621551F3
+P 7550 2300
+F 0 "R20" H 7482 2254 50  0000 R CNN
+F 1 "2k" H 7482 2345 50  0000 R CNN
+F 2 "digikey-footprints:0805" V 7590 2290 50  0001 C CNN
+F 3 "~" H 7550 2300 50  0001 C CNN
+	1    7550 2300
+	-1   0    0    1   
+$EndComp
+$Comp
+L Device:R_US R22
+U 1 1 62155FEA
+P 7850 2300
+F 0 "R22" H 7782 2254 50  0000 R CNN
+F 1 "2.5k" H 7782 2345 50  0000 R CNN
+F 2 "digikey-footprints:0805" V 7890 2290 50  0001 C CNN
+F 3 "~" H 7850 2300 50  0001 C CNN
+	1    7850 2300
+	-1   0    0    1   
+$EndComp
+$Comp
+L Device:R_US R21
+U 1 1 6215704E
+P 7850 1900
+F 0 "R21" H 7782 1854 50  0000 R CNN
+F 1 "20k" H 7782 1945 50  0000 R CNN
+F 2 "digikey-footprints:0805" V 7890 1890 50  0001 C CNN
+F 3 "~" H 7850 1900 50  0001 C CNN
+	1    7850 1900
+	-1   0    0    1   
+$EndComp
+Wire Wire Line
+	5500 3550 5400 3550
+Wire Wire Line
+	5400 3550 5400 3450
+Wire Wire Line
+	5500 3750 5400 3750
+Wire Wire Line
+	5400 3750 5400 3550
+Connection ~ 5400 3550
+Wire Wire Line
+	5500 3850 5400 3850
+Wire Wire Line
+	5400 3850 5400 4300
+Wire Wire Line
+	5500 3650 4250 3650
+Wire Wire Line
+	4250 3650 4250 4300
+Wire Wire Line
+	4250 4600 4250 4650
+Wire Wire Line
+	5400 4600 5400 4650
+Wire Wire Line
+	5050 4600 5050 4650
+Wire Wire Line
+	3950 4600 3950 4650
+Wire Wire Line
+	3950 4650 4250 4650
+Connection ~ 4250 4650
+Connection ~ 5400 4650
+Wire Wire Line
+	5050 4650 5400 4650
+Wire Wire Line
+	5000 1650 5350 1650
+Connection ~ 5350 1650
+Wire Wire Line
+	5150 1350 5000 1350
+Wire Wire Line
+	5000 1350 4750 1350
+Connection ~ 5000 1350
+Wire Wire Line
+	4750 1350 4450 1350
+Wire Wire Line
+	4450 1350 4450 1200
+Connection ~ 4750 1350
+Wire Wire Line
+	5350 2350 5350 2550
+Wire Wire Line
+	5350 2800 4350 2800
+Wire Wire Line
+	4350 2800 4350 2100
+Wire Wire Line
+	4350 2100 4450 2100
+Wire Wire Line
+	4450 2100 4450 2150
+Wire Wire Line
+	4450 2050 4450 2100
+Connection ~ 4450 2100
+Wire Wire Line
+	4750 2050 4750 2100
+Wire Wire Line
+	4750 2450 4750 2500
+Wire Wire Line
+	4450 2450 4450 2500
+Wire Wire Line
+	4450 2500 4750 2500
+Connection ~ 4750 2500
+Wire Wire Line
+	4750 2500 4750 2550
+Wire Wire Line
+	5050 2150 4950 2150
+Wire Wire Line
+	4950 2150 4950 2100
+Wire Wire Line
+	4950 2100 4750 2100
+Connection ~ 4750 2100
+Wire Wire Line
+	4750 2100 4750 2150
+Wire Wire Line
+	4750 1650 4750 1750
+Wire Wire Line
+	4450 1750 4450 1350
+Connection ~ 4450 1350
+$Comp
+L power:GND #PWR016
+U 1 1 62363F34
+P 6550 1650
+F 0 "#PWR016" H 6550 1400 50  0001 C CNN
+F 1 "GND" H 6555 1477 50  0000 C CNN
+F 2 "" H 6550 1650 50  0001 C CNN
+F 3 "" H 6550 1650 50  0001 C CNN
+	1    6550 1650
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR018
+U 1 1 62428820
+P 7550 2550
+F 0 "#PWR018" H 7550 2300 50  0001 C CNN
+F 1 "GND" H 7555 2377 50  0000 C CNN
+F 2 "" H 7550 2550 50  0001 C CNN
+F 3 "" H 7550 2550 50  0001 C CNN
+	1    7550 2550
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	6950 2350 6950 2550
+Wire Wire Line
+	6950 2750 8100 2750
+Wire Wire Line
+	8100 2750 8100 2100
+Wire Wire Line
+	8100 2100 7850 2100
+Wire Wire Line
+	7850 2150 7850 2100
+Connection ~ 7850 2100
+Wire Wire Line
+	7850 2100 7850 2050
+Wire Wire Line
+	7550 2050 7550 2100
+Wire Wire Line
+	7550 2100 7400 2100
+Wire Wire Line
+	7400 2100 7400 2150
+Wire Wire Line
+	7400 2150 7250 2150
+Connection ~ 7550 2100
+Wire Wire Line
+	7550 2100 7550 2150
+Wire Wire Line
+	7550 1750 7550 1650
+Wire Wire Line
+	7250 1650 6950 1650
+Connection ~ 6950 1650
+Wire Wire Line
+	7150 1350 7250 1350
+Wire Wire Line
+	7850 1350 7850 1200
+Connection ~ 7250 1350
+Wire Wire Line
+	7250 1350 7550 1350
+Connection ~ 7550 1350
+Wire Wire Line
+	7550 1350 7850 1350
+Wire Wire Line
+	7850 1750 7850 1350
+Connection ~ 7850 1350
+Wire Wire Line
+	7850 2450 7850 2500
+Wire Wire Line
+	7850 2500 7550 2500
+Wire Wire Line
+	7550 2500 7550 2450
+Wire Wire Line
+	7550 2550 7550 2500
+Connection ~ 7550 2500
+Wire Wire Line
+	5550 1350 5650 1350
+Wire Wire Line
+	6550 1350 6750 1350
+Wire Wire Line
+	5400 2550 5350 2550
+Connection ~ 5350 2550
+Wire Wire Line
+	5350 2550 5350 2800
+Wire Wire Line
+	5700 2550 5750 2550
+Wire Wire Line
+	6900 2550 6950 2550
+Connection ~ 6950 2550
+Wire Wire Line
+	6950 2550 6950 2750
+Wire Wire Line
+	6600 2550 6550 2550
+Wire Wire Line
+	5750 2550 6150 2550
+Wire Wire Line
+	6150 2550 6150 3550
+Wire Wire Line
+	6150 3550 6100 3550
+Connection ~ 5750 2550
+Wire Wire Line
+	6100 3750 6300 3750
+Wire Wire Line
+	6300 3750 6300 2550
+Wire Wire Line
+	6300 2550 6550 2550
+Connection ~ 6550 2550
+$Comp
+L power:GND #PWR013
+U 1 1 6246809A
+P 5750 2850
+F 0 "#PWR013" H 5750 2600 50  0001 C CNN
+F 1 "GND" H 5755 2677 50  0000 C CNN
+F 2 "" H 5750 2850 50  0001 C CNN
+F 3 "" H 5750 2850 50  0001 C CNN
+	1    5750 2850
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR017
+U 1 1 62468DAD
+P 6550 2850
+F 0 "#PWR017" H 6550 2600 50  0001 C CNN
+F 1 "GND" H 6555 2677 50  0000 C CNN
+F 2 "" H 6550 2850 50  0001 C CNN
+F 3 "" H 6550 2850 50  0001 C CNN
+	1    6550 2850
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	6100 3650 6200 3650
+Wire Wire Line
+	6200 3650 6200 3850
+Wire Wire Line
+	6100 3850 6200 3850
+Connection ~ 6200 3850
+Wire Wire Line
+	6200 3850 6200 3950
+$Comp
+L power:GND #PWR02
+U 1 1 624B344D
+P 2700 2400
+F 0 "#PWR02" H 2700 2150 50  0001 C CNN
+F 1 "GND" H 2705 2227 50  0000 C CNN
+F 2 "" H 2700 2400 50  0001 C CNN
+F 3 "" H 2700 2400 50  0001 C CNN
+	1    2700 2400
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:R_US R26
+U 1 1 624B409F
+P 8350 4000
+F 0 "R26" V 8145 4000 50  0000 C CNN
+F 1 "10k" V 8236 4000 50  0000 C CNN
+F 2 "digikey-footprints:0805" V 8390 3990 50  0001 C CNN
+F 3 "~" H 8350 4000 50  0001 C CNN
+	1    8350 4000
+	0    1    1    0   
+$EndComp
+$Comp
+L Device:R_US R23
+U 1 1 624B5157
+P 7300 4000
+F 0 "R23" V 7095 4000 50  0000 C CNN
+F 1 "10k" V 7186 4000 50  0000 C CNN
+F 2 "digikey-footprints:0805" V 7340 3990 50  0001 C CNN
+F 3 "~" H 7300 4000 50  0001 C CNN
+	1    7300 4000
+	0    1    1    0   
+$EndComp
+$Comp
+L Device:R_US R2
+U 1 1 6261BA2F
+P 3850 5000
+F 0 "R2" H 3782 4954 50  0000 R CNN
+F 1 "10k" H 3782 5045 50  0000 R CNN
+F 2 "digikey-footprints:0805" V 3890 4990 50  0001 C CNN
+F 3 "~" H 3850 5000 50  0001 C CNN
+	1    3850 5000
+	-1   0    0    1   
+$EndComp
+$Comp
+L Device:R_US R1
+U 1 1 6261C80E
+P 3600 4850
+F 0 "R1" V 3805 4850 50  0000 C CNN
+F 1 "1k" V 3714 4850 50  0000 C CNN
+F 2 "digikey-footprints:0805" V 3640 4840 50  0001 C CNN
+F 3 "~" H 3600 4850 50  0001 C CNN
+	1    3600 4850
+	0    -1   -1   0   
+$EndComp
+$Comp
+L Device:R_US R14
+U 1 1 6262547D
+P 5800 5000
+F 0 "R14" H 5732 4954 50  0000 R CNN
+F 1 "10k" H 5732 5045 50  0000 R CNN
+F 2 "digikey-footprints:0805" V 5840 4990 50  0001 C CNN
+F 3 "~" H 5800 5000 50  0001 C CNN
+	1    5800 5000
+	-1   0    0    1   
+$EndComp
+$Comp
+L Device:R_US R15
+U 1 1 62625E9D
+P 6050 4850
+F 0 "R15" V 6255 4850 50  0000 C CNN
+F 1 "1k" V 6164 4850 50  0000 C CNN
+F 2 "digikey-footprints:0805" V 6090 4840 50  0001 C CNN
+F 3 "~" H 6050 4850 50  0001 C CNN
+	1    6050 4850
+	0    -1   -1   0   
+$EndComp
+$Comp
+L power:GND #PWR04
+U 1 1 62635AB1
+P 3850 5150
+F 0 "#PWR04" H 3850 4900 50  0001 C CNN
+F 1 "GND" H 3855 4977 50  0000 C CNN
+F 2 "" H 3850 5150 50  0001 C CNN
+F 3 "" H 3850 5150 50  0001 C CNN
+	1    3850 5150
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR014
+U 1 1 626361C6
+P 5800 5150
+F 0 "#PWR014" H 5800 4900 50  0001 C CNN
+F 1 "GND" H 5805 4977 50  0000 C CNN
+F 2 "" H 5800 5150 50  0001 C CNN
+F 3 "" H 5800 5150 50  0001 C CNN
+	1    5800 5150
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	6300 4850 6200 4850
+Wire Wire Line
+	5900 4850 5800 4850
+Wire Wire Line
+	5800 4850 5700 4850
+Connection ~ 5800 4850
+Wire Wire Line
+	3950 4850 3850 4850
+Wire Wire Line
+	3850 4850 3750 4850
+Connection ~ 3850 4850
+Wire Wire Line
+	3450 4850 3350 4850
+$Comp
+L Mechanical:MountingHole H1
+U 1 1 6267552B
+P 9450 4200
+F 0 "H1" H 9550 4246 50  0000 L CNN
+F 1 "#4" H 9550 4155 50  0000 L CNN
+F 2 "MountingHole:MountingHole_3.2mm_M3" H 9450 4200 50  0001 C CNN
+F 3 "~" H 9450 4200 50  0001 C CNN
+	1    9450 4200
+	1    0    0    -1  
+$EndComp
+$Comp
+L Mechanical:MountingHole H2
+U 1 1 626760A8
+P 9450 4400
+F 0 "H2" H 9550 4446 50  0000 L CNN
+F 1 "#4" H 9550 4355 50  0000 L CNN
+F 2 "MountingHole:MountingHole_3.2mm_M3" H 9450 4400 50  0001 C CNN
+F 3 "~" H 9450 4400 50  0001 C CNN
+	1    9450 4400
+	1    0    0    -1  
+$EndComp
+$Comp
+L Mechanical:MountingHole H3
+U 1 1 62676846
+P 9450 4600
+F 0 "H3" H 9550 4646 50  0000 L CNN
+F 1 "#4" H 9550 4555 50  0000 L CNN
+F 2 "MountingHole:MountingHole_3.2mm_M3" H 9450 4600 50  0001 C CNN
+F 3 "~" H 9450 4600 50  0001 C CNN
+	1    9450 4600
+	1    0    0    -1  
+$EndComp
+$Comp
+L Mechanical:MountingHole H4
+U 1 1 62677003
+P 9450 4800
+F 0 "H4" H 9550 4846 50  0000 L CNN
+F 1 "#4" H 9550 4755 50  0000 L CNN
+F 2 "MountingHole:MountingHole_3.2mm_M3" H 9450 4800 50  0001 C CNN
+F 3 "~" H 9450 4800 50  0001 C CNN
+	1    9450 4800
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	5800 1350 5650 1350
+Connection ~ 5650 1350
+Wire Wire Line
+	6400 1350 6550 1350
+Connection ~ 6550 1350
+$Comp
+L Device:LED D7
+U 1 1 6279761C
+P 7450 4900
+F 0 "D7" V 7489 4782 50  0000 R CNN
+F 1 "LED" V 7398 4782 50  0000 R CNN
+F 2 "LED_SMD:LED_0805_2012Metric" H 7450 4900 50  0001 C CNN
+F 3 "~" H 7450 4900 50  0001 C CNN
+	1    7450 4900
+	0    -1   -1   0   
+$EndComp
+$Comp
+L Device:R_US R24
+U 1 1 6279845E
+P 7450 4600
+F 0 "R24" H 7382 4554 50  0000 R CNN
+F 1 "1k" H 7382 4645 50  0000 R CNN
+F 2 "digikey-footprints:0805" V 7490 4590 50  0001 C CNN
+F 3 "~" H 7450 4600 50  0001 C CNN
+	1    7450 4600
+	-1   0    0    1   
+$EndComp
+$Comp
+L Transistor_FET:IRLML9301 Q7
+U 1 1 627C2E4F
+P 7350 4250
+F 0 "Q7" H 7554 4204 50  0000 L CNN
+F 1 "IRLML9301" H 6950 4400 50  0000 L CNN
+F 2 "Package_TO_SOT_SMD:SOT-23" H 7550 4175 50  0001 L CIN
+F 3 "https://www.infineon.com/dgdl/irlml9301pbf.pdf?fileId=5546d462533600a401535668e5e42640" H 7350 4250 50  0001 L CNN
+	1    7350 4250
+	1    0    0    1   
+$EndComp
+$Comp
+L power:GND #PWR020
+U 1 1 6292C49D
+P 7450 5050
+F 0 "#PWR020" H 7450 4800 50  0001 C CNN
+F 1 "GND" H 7455 4877 50  0000 C CNN
+F 2 "" H 7450 5050 50  0001 C CNN
+F 3 "" H 7450 5050 50  0001 C CNN
+	1    7450 5050
+	1    0    0    -1  
+$EndComp
+$Comp
+L Transistor_FET:IRLML9301 Q8
+U 1 1 6295AD90
+P 8300 4250
+F 0 "Q8" H 8505 4204 50  0000 L CNN
+F 1 "IRLML9301" H 7900 4400 50  0000 L CNN
+F 2 "Package_TO_SOT_SMD:SOT-23" H 8500 4175 50  0001 L CIN
+F 3 "https://www.infineon.com/dgdl/irlml9301pbf.pdf?fileId=5546d462533600a401535668e5e42640" H 8300 4250 50  0001 L CNN
+	1    8300 4250
+	-1   0    0    1   
+$EndComp
+$Comp
+L Device:R_US R25
+U 1 1 62969404
+P 8200 4600
+F 0 "R25" H 8132 4554 50  0000 R CNN
+F 1 "1k" H 8132 4645 50  0000 R CNN
+F 2 "digikey-footprints:0805" V 8240 4590 50  0001 C CNN
+F 3 "~" H 8200 4600 50  0001 C CNN
+	1    8200 4600
+	-1   0    0    1   
+$EndComp
+$Comp
+L Device:LED D8
+U 1 1 6296A44A
+P 8200 4900
+F 0 "D8" V 8239 4782 50  0000 R CNN
+F 1 "LED" V 8148 4782 50  0000 R CNN
+F 2 "LED_SMD:LED_0805_2012Metric" H 8200 4900 50  0001 C CNN
+F 3 "~" H 8200 4900 50  0001 C CNN
+	1    8200 4900
+	0    -1   -1   0   
+$EndComp
+$Comp
+L power:GND #PWR022
+U 1 1 6296B16D
+P 8200 5050
+F 0 "#PWR022" H 8200 4800 50  0001 C CNN
+F 1 "GND" H 8205 4877 50  0000 C CNN
+F 2 "" H 8200 5050 50  0001 C CNN
+F 3 "" H 8200 5050 50  0001 C CNN
+	1    8200 5050
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	7150 4250 7150 4000
+Connection ~ 7150 4250
+Connection ~ 7150 4000
+Wire Wire Line
+	7150 4000 7150 3700
+Wire Wire Line
+	7450 4000 7450 4050
+Wire Wire Line
+	8200 4000 8200 4050
+Wire Wire Line
+	8200 4000 8200 3900
+Wire Wire Line
+	8200 3900 7800 3900
+Wire Wire Line
+	7450 3900 7450 4000
+Connection ~ 8200 4000
+Connection ~ 7450 4000
+Wire Wire Line
+	7800 3700 7800 3900
+Wire Wire Line
+	7800 3900 7450 3900
+Wire Wire Line
+	8500 4250 8500 4000
+Connection ~ 8500 4000
+Wire Wire Line
+	8500 4000 8500 3700
+Connection ~ 8500 4250
+$Comp
+L Connector:Conn_01x06_Male J2
+U 1 1 61F30E1C
+P 9350 1800
+F 0 "J2" H 9322 1774 50  0000 R CNN
+F 1 "XFER_SW" H 9322 1683 50  0000 R CNN
+F 2 "Connector_PinHeader_2.54mm:PinHeader_1x06_P2.54mm_Horizontal" H 9350 1800 50  0001 C CNN
+F 3 "~" H 9350 1800 50  0001 C CNN
+	1    9350 1800
+	-1   0    0    -1  
+$EndComp
+Wire Wire Line
+	9150 1600 8900 1600
+Wire Wire Line
+	9150 1800 8900 1800
+Wire Wire Line
+	9150 1900 8900 1900
+Wire Wire Line
+	9150 2100 8900 2100
+$Comp
+L power:GND #PWR023
+U 1 1 61F618DF
+P 8500 2150
+F 0 "#PWR023" H 8500 1900 50  0001 C CNN
+F 1 "GND" H 8505 1977 50  0000 C CNN
+F 2 "" H 8500 2150 50  0001 C CNN
+F 3 "" H 8500 2150 50  0001 C CNN
+	1    8500 2150
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	8500 1700 8500 2000
+Wire Wire Line
+	8500 1700 9150 1700
+Wire Wire Line
+	8500 2000 9150 2000
+Connection ~ 8500 2000
+Wire Wire Line
+	8500 2000 8500 2150
+Text GLabel 5800 1350 2    50   Output ~ 0
+C1+
+Text GLabel 6400 1350 0    50   Output ~ 0
+C2+
+Text GLabel 8900 1600 0    50   Output ~ 0
+C1+
+Text GLabel 8900 1800 0    50   Output ~ 0
+C2+
+Text GLabel 7150 3700 1    50   Input ~ 0
+I1
+Text GLabel 8500 3700 1    50   Input ~ 0
+I2
+Text GLabel 8900 1900 0    50   Input ~ 0
+I1
+Text GLabel 8900 2100 0    50   Input ~ 0
+I2
+Wire Wire Line
+	1950 1500 2350 1500
+Wire Wire Line
+	1950 1600 2350 1600
+Text GLabel 2350 1500 2    50   Input ~ 0
+P1
+Text GLabel 3350 4850 0    50   Input ~ 0
+P1
+Text GLabel 2350 1600 2    50   Input ~ 0
+P2
+Text GLabel 6300 4850 2    50   Input ~ 0
+P2
+Text GLabel 2200 1700 2    50   Output ~ 0
+~I1
+Wire Wire Line
+	1950 1700 2200 1700
+Wire Wire Line
+	1950 1800 2350 1800
+Text GLabel 6900 4250 0    50   Output ~ 0
+~I1
+Text GLabel 8700 4250 2    50   Output ~ 0
+~I2
+$Comp
+L Connector:Conn_01x07_Male J1
+U 1 1 621CA9A6
+P 1750 1800
+F 0 "J1" H 1722 1732 50  0000 R CNN
+F 1 "MCU" H 1722 1823 50  0000 R CNN
+F 2 "Connector_PinHeader_2.54mm:PinHeader_1x07_P2.54mm_Horizontal" H 1750 1800 50  0001 C CNN
+F 3 "~" H 1750 1800 50  0001 C CNN
+	1    1750 1800
+	1    0    0    1   
+$EndComp
+Wire Wire Line
+	2700 1750 2700 1900
+Wire Wire Line
+	2700 1900 1950 1900
+Wire Wire Line
+	1950 2000 2950 2000
+Wire Wire Line
+	2950 2000 2950 1750
+Wire Wire Line
+	1950 2100 2700 2100
+Wire Wire Line
+	2700 2100 2700 2400
+Wire Wire Line
+	6900 4250 7150 4250
+Wire Wire Line
+	8500 4250 8700 4250
+Text Notes 700  7750 0    100  ~ 0
+Designed Intended for Relcomm RTS-TS3AB-I RF Transfer Switch\n- Controls a single RTS-TS3AB-I\n- Dual Position RF Transfer Switch\n- 28V Coil \n- Pulse Latching \n- w/ Indicator Feedback\nDesign Features:\n- TTL Level Control from MCU (+5V / +3V3)\n- TTL Level Feedback for MCU (+5V / +3V3)\n- Optically Isolated Control (ILD207T)\n- LED Current Position Indicator\n- LED Set Position Indicator (pulsed)\n- Relay Coil Control via dual W6PQL based FET Switch circuits
+Text GLabel 2350 1800 2    50   Output ~ 0
+~I2
+Text Notes 950  3450 0    79   ~ 0
+P1, P2: \n- TTL Hi signal sets position and strobes PX LED\n- Set P1 OR P2 Hi, but not both at same time\n~I1~ , ~I2~:\n- TTL LOW Signal indicates transfer switch position.\n- Different LED Colors Indicate Current Position\n- See Truth Table
+Text Notes 1000 3750 0    100  ~ 20
+~I1
+Text Notes 1300 3750 0    100  ~ 20
+~I2
+Text Notes 1600 3750 0    100  ~ 20
+XFER POS
+Text Notes 1000 4250 0    100  ~ 20
+HI
+Text Notes 1300 4250 0    100  ~ 20
+LO
+Text Notes 1600 4250 0    100  ~ 20
+POS2
+Text Notes 1300 4000 0    100  ~ 20
+HI
+Text Notes 1000 4000 0    100  ~ 20
+LO
+Text Notes 1600 4000 0    100  ~ 20
+POS1
+Wire Bus Line
+	1250 3500 1250 4300
+Wire Bus Line
+	1550 3500 1550 4300
+Wire Bus Line
+	950  3500 1250 3500
+Wire Bus Line
+	3350 3500 3350 3800
+Wire Bus Line
+	3350 4300 2400 4300
+Wire Bus Line
+	950  4300 950  4050
+Connection ~ 1250 3500
+Wire Bus Line
+	1250 3500 1550 3500
+Connection ~ 1550 3500
+Wire Bus Line
+	1550 3500 2400 3500
+Connection ~ 1250 4300
+Wire Bus Line
+	1250 4300 950  4300
+Connection ~ 1550 4300
+Wire Bus Line
+	1550 4300 1250 4300
+Wire Bus Line
+	950  3800 3350 3800
+Connection ~ 3350 3800
+Wire Bus Line
+	3350 3800 3350 4050
+Wire Bus Line
+	950  4050 3350 4050
+Connection ~ 950  4050
+Wire Bus Line
+	3350 4050 3350 4300
+Text Notes 7200 4950 0    50   ~ 0
+RED
+Text Notes 4750 4200 0    50   ~ 0
+GREEN
+Connection ~ 7800 3900
+Text Notes 7950 4950 0    50   ~ 0
+BLUE
+Text Notes 3650 4200 0    50   ~ 0
+GREEN
+Text Notes 2450 3750 0    100  ~ 20
+LED COLOR
+Text Notes 2450 4000 0    100  ~ 20
+RED
+Text Notes 2450 4250 0    100  ~ 20
+BLUE
+Wire Bus Line
+	950  3500 950  3800
+Connection ~ 950  3800
+Wire Bus Line
+	950  3800 950  4050
+Connection ~ 3350 4050
+Wire Bus Line
+	2400 3500 2400 4300
+Connection ~ 2400 3500
+Wire Bus Line
+	2400 3500 3350 3500
+Connection ~ 2400 4300
+Wire Bus Line
+	2400 4300 1550 4300
+$EndSCHEMATC
